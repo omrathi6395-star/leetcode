@@ -26,7 +26,7 @@ public:
          fast=fast->next->next;
        }
        ListNode*prev,*curr,*nxt;
-       prev=NULL;
+       prev=slow;
        curr=slow->next;
        slow->next=NULL;
         while(curr)
@@ -36,7 +36,7 @@ public:
             prev=curr;
             curr=nxt;
         }
-        while(head && prev)
+        while(head!=prev && head )
         {
             if(head->val!=prev->val)
             {
